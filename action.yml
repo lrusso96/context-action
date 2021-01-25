@@ -1,16 +1,20 @@
-name: "ConTeXt Action"
-description: "A GitHub Action for ConTeXt"
+name: ConTeXt Action
+description: A GitHub Action for ConTeXt
+author: Luigi Russo
 inputs:
   main-tex:
-    description: "Path to main file"
+    description: Path to main file
     required: true
-    default: "main.tex"
+    default: main.tex
   working-directory:
-    description: "The working directory for ConTeXt"
+    description: The working directory for ConTeXt
     required: false
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: docker
+  image: Dockerfile
   args:
     - ${{ inputs.main-tex}}
     - ${{ inputs.working-directory}}
+branding:
+  icon: file-text
+  color: blue
