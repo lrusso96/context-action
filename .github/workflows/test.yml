@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: GitHub Checkout
+        uses: actions/checkout@v2
+      - name: Compile basic ConTeXt file
+        uses: ./
+        with:
+          main-tex: test.tex
+          working-directory: test/
+      - name: Upload test artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: test
+          path: test.pdf
