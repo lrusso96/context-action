@@ -23,4 +23,5 @@ jobs:
       - name: Compile ConTeXt file with arbitrary command
         uses: ./
         with:
+          working-directory: test/
           force-command: "context main --result=foo"
