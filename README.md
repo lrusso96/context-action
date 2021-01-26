@@ -32,6 +32,17 @@ A simple GitHub Action for [ConTeXt](https://wiki.contextgarden.net).
         args: '--batchmode'
     ```
 
+* `force-command`
+
+    This argument allows to specify a custom command to be run. This simulates the use of a container.
+
+    ```yaml
+    - uses: lrusso96/context-action@main
+      with:
+        working-directory: 'foo_dir'
+        force-command: 'context main --result=backup ; context main --mode=beta --result=beta'
+    ```
+
 ## Example
 
 ```yaml
