@@ -25,5 +25,4 @@ jobs:
         with:
           name: test
           path: |
-            test.pdf
-            custom-test.pdf
+            test/*.pdf
