@@ -12,7 +12,7 @@ inputs:
   args:
     description: Extra arguments to be passed to context
     required: false
-    default: ""
+    default: "--batchmode"
 runs:
   using: docker
   image: Dockerfile

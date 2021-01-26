@@ -24,4 +24,4 @@ else
   info "Args: $args"
 fi
 
-context "$args" "$main_file"
+context "${args[@]}" "$main_file"
