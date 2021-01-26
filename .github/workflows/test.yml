@@ -20,9 +20,7 @@ jobs:
           main-tex: test.tex
           working-directory: test/
           args: "--result=custom-test"
-      - name: Upload test artifact
-        uses: actions/upload-artifact@v2
+      - name: Compile ConTeXt file with arbitrary command
+        uses: ./
         with:
-          name: test
-          path: |
-            test/*.pdf
+          force-command: "context main --result=foo"

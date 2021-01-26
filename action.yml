@@ -13,6 +13,10 @@ inputs:
     description: Extra arguments to be passed to context
     required: false
     default: ""
+  force-command:
+    description: Raw command to be executed
+    required: false
+    default: ""
 runs:
   using: docker
   image: Dockerfile
@@ -20,6 +24,7 @@ runs:
     - ${{ inputs.main-tex}}
     - ${{ inputs.working-directory}}
     - ${{ inputs.args }}
+    - ${{ inputs.force-command }}
 branding:
   icon: file-text
   color: blue

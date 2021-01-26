@@ -9,6 +9,7 @@ info() {
 main_file="${1}"
 working_directory="${2}"
 args="${3}"
+force_command="${4}"
 
 if [[ -n "$working_directory" ]]; then
   if [[ ! -d "$working_directory" ]]; then
@@ -18,7 +19,10 @@ if [[ -n "$working_directory" ]]; then
   info "Using working directory: $working_directory"
 fi
 
-if [[ -z "$args" ]]; then
+if [[-n "$force_commmand"]]; then
+  info "Run raw command: $force_command"
+  "$force_command"
+elif [[ -z "$args" ]]; then
   info "No argument has been specified."
   context "$main_file"
 else
