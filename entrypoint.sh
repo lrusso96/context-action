@@ -20,8 +20,8 @@ fi
 
 if [[ -z "$args" ]]; then
   info "No argument has been specified."
+  context "$main_file"
 else
   info "Args: $args"
+  context "$args" "$main_file"
 fi
-
-context "$args" "$main_file"
