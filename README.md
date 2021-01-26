@@ -21,6 +21,17 @@ A simple GitHub Action for [ConTeXt](https://wiki.contextgarden.net).
 
     The working directory for ConTeXt.
 
+* `args`
+
+    The extra arguments to be passed to the context command.
+
+    ```yaml
+    - uses: lrusso96/context-action@main
+      with:
+        main-tex: 'my_main.tex'
+        args: '--batchmode'
+    ```
+
 ## Example
 
 ```yaml
@@ -35,5 +46,5 @@ jobs:
       - name: Compile ConTeXt document
         uses: lrusso96/context-action@main
         with:
-          root_file: my_fancy_main.tex
+          main-tex: my_fancy_main.tex
 ```
