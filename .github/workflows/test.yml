@@ -14,8 +14,16 @@ jobs:
         with:
           main-tex: test.tex
           working-directory: test/
+      - name: Compile ConTeXt file with custom args
+        uses: ./
+        with:
+          main-tex: test.tex
+          args: "--result=custom-test"
+          working-directory: test/
+
       - name: Upload test artifact
         uses: actions/upload-artifact@v2
         with:
           name: test
-          path: test.pdf
+          path: |
+            *.pdf

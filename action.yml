@@ -9,12 +9,17 @@ inputs:
   working-directory:
     description: The working directory for ConTeXt
     required: false
+  args:
+    description: Extra arguments to be passed to context
+    required: false
+    default: ""
 runs:
   using: docker
   image: Dockerfile
   args:
     - ${{ inputs.main-tex}}
     - ${{ inputs.working-directory}}
+    - ${{ inputs.args }}
 branding:
   icon: file-text
   color: blue

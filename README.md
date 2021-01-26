@@ -27,7 +27,7 @@ A simple GitHub Action for [ConTeXt](https://wiki.contextgarden.net).
 name: Compile ConTeXt project
 on: [push]
 jobs:
-  build_latex:
+  build_context:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
