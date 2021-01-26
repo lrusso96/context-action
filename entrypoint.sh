@@ -19,7 +19,7 @@ if [[ -n "$working_directory" ]]; then
   info "Using working directory: $working_directory"
 fi
 
-if [[-n "$force_command"]]; then
+if [[ -n "$force_command" ]]; then
   info "Run raw command: $force_command"
   "$force_command"
 elif [[ -z "$args" ]]; then
