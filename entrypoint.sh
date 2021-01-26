@@ -21,7 +21,7 @@ fi
 
 if [[ -n "$force_command" ]]; then
   info "Run raw command: $force_command"
-  "$force_command"
+  eval "$force_command"
 elif [[ -z "$args" ]]; then
   info "No argument has been specified."
   context "$main_file"
