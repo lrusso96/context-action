@@ -18,12 +18,12 @@ jobs:
         uses: ./
         with:
           main-tex: test.tex
-          args: "--result=custom-test"
           working-directory: test/
-
+          args: "--result=custom-test"
       - name: Upload test artifact
         uses: actions/upload-artifact@v2
         with:
           name: test
           path: |
-            *.pdf
+            test.pdf
+            custom-test.pdf
